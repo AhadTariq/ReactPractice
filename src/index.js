@@ -1,12 +1,16 @@
-//const sq = (num) => num * num;
-//console.log(sq(5));
+const colors = ["red", "yellow", "green"];
 
-const jobs = [
-  { id: 1, isActive: true },
-  { id: 2, isActive: false },
-];
+//using call back functions
+const items = colors.map(function (color) {
+  return "<li>" + color + "</li>";
+});
 
-//const activeJob = jobs.filter(function(job){return job.isActive;});
+//Simplfying it with arrow functions
+const item = colors.map((color) => "<li>" + color + "</li>");
 
-const activeJob = jobs.filter((jobs) => jobs.isActive);
-console.log(activeJob);
+//another simplest way
+const itemsOFcolor = colors.map((color) => `<li>${color}</li>`);
+
+console.log(item);
+console.log(items);
+console.log(itemsOFcolor);
