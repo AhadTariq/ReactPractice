@@ -1,16 +1,16 @@
-const colors = ["red", "yellow", "green"];
+const address = {
+  street: "",
+  city: "",
+  country: "",
+};
 
-//using call back functions
-const items = colors.map(function (color) {
-  return "<li>" + color + "</li>";
-});
+const street = address.street;
+const city = address.city;
+const country = address.country;
 
-//Simplfying it with arrow functions
-const item = colors.map((color) => "<li>" + color + "</li>");
+//now doing destructring object
 
-//another simplest way
-const itemsOFcolor = colors.map((color) => `<li>${color}</li>`);
+const { street, city, country } = address;
+//OR
 
-console.log(item);
-console.log(items);
-console.log(itemsOFcolor);
+const { street: st } = address;
