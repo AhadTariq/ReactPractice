@@ -1,16 +1,21 @@
-const address = {
-  street: "",
-  city: "",
-  country: "",
-};
+//Spreading
+const f = [1, 2, 4];
+const d = [3];
 
-const street = address.street;
-const city = address.city;
-const country = address.country;
+const combined = [...f, ...d];
+console.log(combined);
 
-//now doing destructring object
+//class
 
-const { street, city, country } = address;
-//OR
+class Person {
+  contructor(name) {
+    this.name = name;
+  }
 
-const { street: st } = address;
+  walk() {
+    console.log("Walk");
+  }
+}
+
+const person = new Person("Mosh");
+person.walk();
